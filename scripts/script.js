@@ -23,6 +23,7 @@ async function loadUsers(search = "") {
                             <td>${user.date_added}</td>
                         </tr>`;
 			});
+
 			userTableBody.innerHTML = rows;
 		} else {
 			userTableBody.innerHTML =
