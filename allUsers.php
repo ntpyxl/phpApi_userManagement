@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    Hello there, user!
+
+    
+
+    <div class="container border mt-4">
+        <div class="my-3">
+            <label for="searchField" class="form-label">Search User</label>
+            <input type="email" class="form-control" id="searchField">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <button type="button" class="btn mt-2 btn-primary">Search</button>
+                    <button type="button" class="btn mt-2 btn-secondary">Clear</button>
+                </div>
+
+                <button type="button" class="btn mt-2 btn-secondary">Add User</button>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <table class="table table-striped table-hover">
+                <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Is Admin</th>
+                    <th>Date Added</th>
+                </tr>
+
+                <tbody id="userTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

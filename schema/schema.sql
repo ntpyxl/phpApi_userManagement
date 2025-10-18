@@ -1,0 +1,9 @@
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(64) NOT NULL UNIQUE,
+    first_name VARCHAR(64) NOT NULL,
+    last_name VARCHAR(64) NOT NULL,
+    is_admin TINYINT(1) NOT NULL DEFAULT 0,
+    user_password VARCHAR(1024) NOT NULL,
+    date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
