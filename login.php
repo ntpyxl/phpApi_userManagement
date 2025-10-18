@@ -25,12 +25,12 @@ if(isset($_SESSION['user_id'])) {
             <form onsubmit="loginUser(event)" class="col-md-6 col-lg-4 border p-3">
                 <div class="mb-3">
                     <label for="usernameField" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="usernameField" name="username">
+                    <input type="text" class="form-control" id="usernameField" name="username" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="passwordField" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="passwordField" name="password">
+                    <input type="password" class="form-control" id="passwordField" name="password" required>
                 </div>
 
                 <div class="d-flex mb-3 justify-content-end">

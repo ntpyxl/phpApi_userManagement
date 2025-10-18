@@ -25,22 +25,22 @@ if(isset($_SESSION['user_id'])) {
             <form onsubmit="registerUser(event)" class="col-md-6 col-lg-4 border p-3">
                 <div class="mb-3">
                     <label for="usernameField" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="usernameField" name="username">
+                    <input type="text" class="form-control" id="usernameField" name="username" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="firstnameField" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="firstnameField" name="firstname">
+                    <input type="text" class="form-control" id="firstnameField" name="firstname" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="lastnameField" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="lastnameField" name="lastname">
+                    <input type="text" class="form-control" id="lastnameField" name="lastname" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="roleField" class="form-label">User Role</label>
-                    <select class="form-select" aria-label="Default select example" id="roleField" name="role">
+                    <select class="form-select" aria-label="Default select example" id="roleField" name="role"> required
                         <option selected disabled>Select user role</option>
                         <option value="0">User</option>
                         <option value="1">Admin</option>
@@ -49,12 +49,12 @@ if(isset($_SESSION['user_id'])) {
 
                 <div class="mb-3">
                     <label for="passwordField" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="passwordField" name="password">
+                    <input type="password" class="form-control" id="passwordField" name="password" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="confirmPasswordField" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPasswordField" name="confirmPassword">
+                    <input type="password" class="form-control" id="confirmPasswordField" name="confirmPassword" required>
                 </div>
                 
 
