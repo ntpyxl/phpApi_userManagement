@@ -19,10 +19,14 @@ if(!isset($_SESSION['user_id'])) {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    Hello there, <?php echo $_SESSION['first_name']?>!
+    <div class="container mt-4">
+        <h2>Hello there, <?php echo $_SESSION['first_name']?>!</h2>
 
-    <a href="logout.php" class="btn btn-warning">Logout</a>
-
-    <script src="scripts/script.js"></script>
+        <?php if($_SESSION['is_admin'] === 1) { ?>
+            <a href="allUsers.php" class="btn btn-info">All Users</a>
+        <?php } ?>
+        
+        <a href="logout.php" class="btn btn-warning">Logout</a>
+    </div>
 </body>
 </html>

@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+if(!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+}
+
+if($_SESSION['is_admin'] !== 1) {
+    header("Location: index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +22,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    Hello there, user!
+    <div class="container mt-4">
+        <h2>Hello there, <?php echo $_SESSION['first_name']?>!</h2>
 
+        <a href="index.php" class="btn btn-info">Home</a>
+        <a href="logout.php" class="btn btn-warning">Logout</a>
+    </div>
     
-
     <div class="container border mt-4">
         <div class="my-3">
             <label for="searchField" class="form-label">Search User</label>
