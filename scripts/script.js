@@ -2,6 +2,16 @@ $(document).ready(function () {
 	loadUsers();
 });
 
+$("#searchField").on("input", function (event) {
+	event.preventDefault();
+	loadUsers($(this).val());
+});
+
+$("#clearSearchFieldButton").on("click", () => {
+	$("#searchField").val("");
+	loadUsers();
+});
+
 async function loadUsers(search = "") {
 	try {
 		const request = await fetch("scripts/api.php", {

@@ -32,14 +32,10 @@ if($_SESSION['is_admin'] !== 1) {
     <div class="container border mt-4">
         <div class="my-3">
             <label for="searchField" class="form-label">Search User</label>
-            <input type="email" class="form-control" id="searchField">
+            <input type="text" class="form-control" id="searchField">
             <div class="d-flex justify-content-between">
-                <div>
-                    <button type="button" class="btn mt-2 btn-primary">Search</button>
-                    <button type="button" class="btn mt-2 btn-secondary">Clear</button>
-                </div>
-
-                <button type="button" class="btn mt-2 btn-secondary">Add User</button>
+                <button type="button" class="btn mt-2 btn-secondary" id="clearSearchFieldButton">Clear</button>
+                <button type="button" class="btn mt-2 btn-secondary" id="clearSearchFieldButton">Add User</button>
             </div>
         </div>
 
