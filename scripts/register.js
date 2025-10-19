@@ -1,4 +1,4 @@
-async function registerUser(event) {
+async function registerUser(event, redirTo) {
 	event.preventDefault();
 
 	const formData = Object.fromEntries(new FormData(event.target).entries());
@@ -21,7 +21,7 @@ async function registerUser(event) {
 				icon: "success",
 				confirmButtonColor: "#14b8a6",
 			}).then(() => {
-				window.location.href = "login.php";
+				window.location.href = redirTo;
 			});
 		} else {
 			Swal.fire({

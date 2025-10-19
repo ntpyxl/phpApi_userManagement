@@ -22,7 +22,7 @@ if(isset($_SESSION['user_id'])) {
     <h2 class="text-center mt-4">Register Page</h2>
     <div class="container mt-4">
         <div class="row justify-content-center">
-            <form onsubmit="registerUser(event)" class="col-md-6 col-lg-4 border p-3">
+            <form onsubmit="registerUser(event, 'login.php')" class="col-md-6 col-lg-4 border p-3">
                 <div class="mb-3">
                     <label for="usernameField" class="form-label">Username</label>
                     <input type="text" class="form-control" id="usernameField" name="username" required>
@@ -57,7 +57,6 @@ if(isset($_SESSION['user_id'])) {
                     <input type="password" class="form-control" id="confirmPasswordField" name="confirmPassword" required>
                 </div>
                 
-
                 <div class="d-flex mb-3 justify-content-end">
                     <button type="submit" class="btn btn-primary" id="registerButton" name="registerButton">Register</button>
                 </div>
