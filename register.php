@@ -40,8 +40,8 @@ if(isset($_SESSION['user_id'])) {
 
                 <div class="mb-3">
                     <label for="roleField" class="form-label">User Role</label>
-                    <select class="form-select" aria-label="Default select example" id="roleField" name="role"> required
-                        <option selected disabled>Select user role</option>
+                    <select class="form-select" aria-label="Default select example" id="roleField" name="role" required> 
+                        <option value="" selected disabled>Select user role</option>
                         <option value="0">User</option>
                         <option value="1">Admin</option>
                     </select>
